@@ -12,7 +12,7 @@
 
 }
 
-@keyframes example {
+/*@keyframes example {
     0% {
         left: 0px;
         top: 0px;
@@ -22,7 +22,7 @@
         left: 600px;
         top: 0px;
     }
-
+*/
 .users__table {
 
     margin: 0 auto;
@@ -82,4 +82,7 @@ header {
     border: none;
     color: #000;
     background: #FFF8DC;
+}
+.inputText {
+    text-align: center;
 }

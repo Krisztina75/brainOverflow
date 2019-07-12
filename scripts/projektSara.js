@@ -122,7 +122,7 @@ var User = {
     var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
     var nodeTR = document.getElementById(`${nodeTRID}`);
 
-    for (var i = 0; i < 3; i++) {
+    for (var i = 1; i < 4; i++) {
       var nodeInput = nodeTR.children[i].children[0];
       nodeInput.disabled = false;
     }
