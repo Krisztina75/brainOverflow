@@ -31,13 +31,13 @@ var User = {
 
       for (var memberName in users[i]) {
         if (users[i].hasOwnProperty(memberName)) {
-          if (memberName === 'id') {
-            continue;
-          }
+          // if (memberName === 'id') {
+          //   continue;
+          // }
           usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
         }
       }
-      usersTemplate += `<td><button  dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
+      usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
       usersTemplate += `<td><button onclick="User.torles()" dataid="${users[i].id}">Törlés</button></td>`;
       usersTemplate += '</tr>';
     }
@@ -70,17 +70,55 @@ var User = {
     }
     this.showAll(this.data);
   },
-  create() {
 
+  create() {
+    var newUser = {};
+
+    newUser.id = 103;
+
+    var newUserName = document.querySelector('#newUser').value;
+    if (newUserName !== null && newUserName !== '') {
+      newUser.name = newUserName;
+    }
+
+    var newUserEmail = document.querySelector('#newUserEmail').value;
+    if (newUserEmail !== null && newUserEmail !== '') {
+      newUser.emailAddress = newUserEmail;
+    }
+
+    var newUserAddress = document.querySelector('#newUserAddress').value;
+    if (newUserAddress !== null && newUserAddress !== '') {
+      newUser.address = newUserAddress;
+    }
+
+    if (newUser.name !== null && newUser.name !== '' &&
+      newUserEmail !== null && newUserEmail !== '' &&
+      newUserAddress !== null && newUserAddress !== '') {
+      this.data.push(newUser);
+    }
+    this.showAll(this.data);
+  },
+
+  clear() {
+    document.querySelector('#newUser').value = '';
+    document.querySelector('#newUserEmail').value = '';
+    document.querySelector('#newUserAddress').value = '';
   },
 
   store() {
 
   },
   edit() {
+    var nodeTD = event.target;
+    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+    var nodeTR = document.getElementById(`${nodeTRID}`);
 
+    for (var i = 0; i < 3; i++) {
+      var nodeInput = nodeTR.children[i].children[0];
+      nodeInput.disabled = false;
+    }
   }
 
 };
 
-
+User.init();
