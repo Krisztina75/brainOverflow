@@ -47,7 +47,7 @@
     margin-bottom: 20px;
 }
 
-.login-box input[type="text"],
+.login-box input[type="email"],
 input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
@@ -58,7 +58,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
-.login-box input[type="text"]:active {
+/* .login-box input[type="email"]:active {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -66,9 +66,9 @@ input[type="password"] {
     height: 40px;
     color: #fff;
     font-size: 16px;
-}
+} */
 
-.login-box input[type="submit"] {
+.login-box input[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -79,15 +79,19 @@ input[type="password"] {
     box-shadow: 0 9px #999;
 }
 
-.login-box input[type="submit"]:hover {
+.login-box input[type="button"]:hover {
     cursor: pointer;
-    background: #39dc79;
+    background: #dc1cc2;
     color: #000;
     box-shadow: 0 9px #999;
 }
 
-.login-box input[type="submit"]:active {
+.login-box input[type="button"]:active {
     background: #39dc79;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+#failedLogin {
+    display: none;
 }
