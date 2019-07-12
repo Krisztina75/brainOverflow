@@ -30,7 +30,8 @@ var User = {
           usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
         }
       }
-
+      usersTemplate += '<td><button>Szerkesztés</button> <button class="display--none">x</button><button class="display--none">✓</button></td>';
+      usersTemplate += '<td><button>Törlés</button></td>';
       usersTemplate += '</tr>';
     }
 
