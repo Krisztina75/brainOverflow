@@ -25,11 +25,11 @@
     <main>
         <div>
             <label for="newUser">Új felhasználó</label>
-            <input type="text" name="newUser" id="newUser" placeholder="Name">
-            <input type="email" name="newUser" id="newUserEmail" placeholder="Email">
-            <input type="address" name="newUser" id="newUserAddress" placeholder="Address">
-            <button onclick="create()">Hozzáadás</button>
-            <button>Mégse</button>
+            <input type="text" name="newUser" id="newUser" required>
+            <input type="email" name="newUser" id="newUserEmail" placeholder="Email" required>
+            <input type="text" name="newUser" id="newUserAddress" placeholder="Address" required>
+            <input type="submit" onclick="User.create()" value="Hozzáadás">
+            <button onclick="User.clear()">Mégse</button>
         </div>
         <div class="users">
             <table class="users__table">

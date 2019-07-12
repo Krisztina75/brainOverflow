@@ -58,13 +58,32 @@ var User = {
     var newUser = {};
 
     newUser.id = 103;
-    newUser.name = document.querySelector('#newUser').value;
-    newUser.emailAddress = document.querySelector('#newUserEmail').value;
-    newUser.address = document.querySelector('#newUserAddress').value;
+
+    var newUserName = document.querySelector('#newUser').value;
+    if (newUserName !== null && newUserName !== '') {
+      newUser.name = newUserName;
+    }
+
+    var newUserEmail = document.querySelector('#newUserEmail').value;
+    if (newUserEmail !== null && newUserEmail !== '') {
+      newUser.emailAddress = newUserEmail;
+    }
+
+    var newUserAddress = document.querySelector('#newUserAddress').value;
+    if (newUserAddress !== null && newUserAddress !== '') {
+      newUser.address = newUserAddress;
+    }
 
     this.data.push(newUser);
     this.showAll(this.data);
   },
+
+  // clear() {
+  //   document.querySelector('#newUser').value = '';
+  //   document.querySelector('#newUserEmail').value = '';
+  //   document.querySelector('#newUserAddress').value = '';
+  // }
+
   store() {
 
   },
