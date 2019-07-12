@@ -7,35 +7,30 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible"
           content="ie=edge">
-    <title>brainOverflow - Bejelentkezés</title>
+    <title>brainOverFlow - Bejelentkezés</title>
+    <link rel="stylesheet"
+          href="/design/style.css">
 </head>
 
-<body>
-    <div class="login-form-container">
+<body class="login-body">
+    <div class="login-box">
+        <img src="/img/boflogo.jpg"
+             class="logo">
+        <h1 class="login-h1">Bejelentkezés</h1>
         <form>
-            <div class="imgcontainer">
-                <img src=""
-                     alt=""
-                     class="">
-            </div>
-    
-            <div class="container">
-                <label for="uname"><b>Email cím</b></label>
-                <input type="email"
-                       placeholder="Add meg az email címed"
-                       name="emailname"
-                       required>
-                <br>
-                <br>
-                <label for="psw"><b>Jelszó</b></label>
-                <input type="password"
-                       placeholder="Add meg a jelszavad"
-                       name="passname"
-                       required>
-                <br>
-                <br>
-                <button type="submit">Bejelentkezés</button>
-            </div>
+            <p>Email cím</p>
+            <input type="email"
+                   name="emailname"
+                   placeholder="Add meg az email címed"
+                   required>
+            <p>Jelszó</p>
+            <input type="password"
+                   name="passwordname"
+                   placeholder="Add meg a jelszavad"
+                   required>
+            <input type="submit"
+                   name="submit"
+                   value="Bejelentkezés">
         </form>
     </div>
 </body>
