@@ -47,8 +47,18 @@
     margin-bottom: 20px;
 }
 
-.login-box input[type="email"],
+.login-box input[type="text"],
 input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-box input[type="text"]:active {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -66,10 +76,18 @@ input[type="password"] {
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+    box-shadow: 0 9px #999;
 }
 
 .login-box input[type="submit"]:hover {
     cursor: pointer;
     background: #39dc79;
     color: #000;
+    box-shadow: 0 9px #999;
+}
+
+.login-box input[type="submit"]:active {
+    background: #39dc79;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
