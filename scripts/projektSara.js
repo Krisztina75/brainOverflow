@@ -118,7 +118,14 @@ var User = {
 
   },
   edit() {
+    var nodeTD = event.target;
+    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+    var nodeTR = document.getElementById(`${nodeTRID}`);
 
+    for (var i = 0; i < 3; i++) {
+      var nodeInput = nodeTR.children[i].children[0];
+      nodeInput.disabled = false;
+    }
   }
 
 };
