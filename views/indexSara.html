@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"
-          content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="/design/projekt.css">
@@ -22,10 +20,10 @@
         <a href="">Kapcsolat</a>
     </nav>
     <header>
-
+        <div>Brainoverflow Admin</div>
     </header>
     <main>
-        <div>
+        <div class="newUserDiv">
             <label for="newUser">Új felhasználó</label>
             <input type="text" name="newUser" id="newUser" placeholder="Name" required>
             <input type="email" name="newUser" id="newUserEmail" placeholder="Email address" required>
@@ -34,8 +32,7 @@
             <button onclick="User.clear()">Mégse</button>
         </div>
         <div class="users">
-            <div id="deleteDiv"
-                 class="display--none">
+            <div id="deleteDiv" class="display--none">
                 <p>Biztosan törölni szeretnéd?</p>
                 <button onclick="User.applyDelete('true')">Igen</button>
                 <button onclick="User.applyDelete('false')">Nem</button>

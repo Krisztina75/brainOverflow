@@ -1,3 +1,44 @@
-.display--none{
+.display--none {
     display: none;
+}
+
+.users__table {
+
+    margin: 0 auto;
+    position: relative;
+    top:100px;
+}
+
+body {
+    margin: 0;
+background:#FFF8DC;
+}
+
+nav {
+    background: bisque;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+ 
+}
+nav a{
+    padding:10px 50px;
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    position: relative;
+    top: 40px;
+    background:url(/img/brainpic.PNG);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.newUserDiv {
+    position: relative;
+    top: 60px;
 }
