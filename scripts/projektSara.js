@@ -37,13 +37,8 @@ var User = {
           usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
         }
       }
-<<<<<<< HEAD
-      usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
-      usersTemplate += `<td><button onclick="User.remove()" dataid="${users[i].id}">Törlés</button></td>`;
-=======
       usersTemplate += `<td><button  dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
       usersTemplate += `<td><button onclick="User.torles()" dataid="${users[i].id}">Törlés</button></td>`;
->>>>>>> 48cff1eb306f02f003c73da6d202ba734cf488a7
       usersTemplate += '</tr>';
     }
 
