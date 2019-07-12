@@ -18,21 +18,27 @@
              class="logo">
         <h1 class="login-h1">Bejelentkezés</h1>
         <form>
-            <p>Email cím</p>
-            <input type="email"
+            <p>Név / Email cím</p>
+            <input type="text"
                    name="emailname"
-                   placeholder="Add meg az email címed"
+                   id="inputEmailName"
+                   placeholder="Név vagy email cím"
+                   onchange="searchUserEmailName()"
                    required>
             <p>Jelszó</p>
             <input type="password"
-                   name="passwordname"
+                   name="password"
+                   id="inputPassword"
                    placeholder="Add meg a jelszavad"
+                   onchange="searchUserPassword()"
                    required>
-            <input type="submit"
+            <input onclick="navigateToIndexHTML()"
+                   type="submit"
                    name="submit"
                    value="Bejelentkezés">
         </form>
     </div>
+    <script src="/scripts/login.js"></script>
 </body>
 
 </html>
