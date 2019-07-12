@@ -24,9 +24,13 @@ var User = {
 
       for (var memberName in users[i]) {
         if (users[i].hasOwnProperty(memberName)) {
-          usersTemplate += `<td>${users[i][memberName]}</td>`;
+          if (memberName === 'id') {
+            continue;
+          }
+          usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
         }
       }
+
       usersTemplate += '</tr>';
     }
     document.querySelector('.users__data').innerHTML = usersTemplate;
