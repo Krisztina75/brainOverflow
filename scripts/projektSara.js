@@ -5,7 +5,7 @@ var User = {
   },
   callback(jsonContent) {
     this.data = JSON.parse(jsonContent).users;
-    this.showAll();
+    this.showAll(this.data);
   },
   getData() {
     var request = new XMLHttpRequest();
@@ -17,8 +17,19 @@ var User = {
     request.open('GET', '/data/users.json');
     request.send();
   },
-  showAll() {
-    console.log(this.data);
+  showAll(users) {
+    var usersTemplate = '';
+    for (var i = 0; i < users.length; i += 1) {
+      usersTemplate += '<tr>';
+
+      for (var memberName in users[i]) {
+        if (users[i].hasOwnProperty(memberName)) {
+          usersTemplate += `<td>${users[i][memberName]}</td>`;
+        }
+      }
+      usersTemplate += '</tr>';
+    }
+    document.querySelector('.users__data').innerHTML = usersTemplate;
   },
   remove() {
 
