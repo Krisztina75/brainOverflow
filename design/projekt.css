@@ -1,3 +1,26 @@
-.display--none{
+.display--none {
     display: none;
+}
+
+.uzenetAnimation {
+    width: 700px;
+    height: 80px;
+    background-color: #96ed66;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+
+}
+
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 600px;
+        top: 0px;
+    }
+
 }
