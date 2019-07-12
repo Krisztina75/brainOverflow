@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Document</title>
-    </head>
-<link rel="stylesheet" href="/design/projekt.css">
+</head>
+<link rel="stylesheet"
+      href="/design/projekt.css">
+
 <body>
     <div class="uzenet display--none"></div>
     <div class="uzenet display--none"></div>
@@ -24,13 +28,25 @@
     <main>
         <div>
             <label for="newUser">Új felhasználó</label>
-            <input type="text" name="newUser" id="newUser">
-            <input type="email" name="newUser" id="newUserEmail">
-            <input type="address" name="newUser" id="newUserAddress">
+            <input type="text"
+                   name="newUser"
+                   id="newUser">
+            <input type="email"
+                   name="newUser"
+                   id="newUserEmail">
+            <input type="address"
+                   name="newUser"
+                   id="newUserAddress">
             <button>Hozzáadás</button>
             <button>Mégse</button>
         </div>
         <div class="users">
+            <div id="deleteDiv"
+                 class="display--none">
+                <p>Biztosan törölni szeretnéd?</p>
+                <button onclick="User.applyDelete('true')">Igen</button>
+                <button onclick="User.applyDelete('false')">Nem</button>
+            </div>
             <table class="users__table">
                 <thead>
                     <tr>
