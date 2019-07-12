@@ -25,19 +25,19 @@ var userLoginData = [{
 }
 ];
 
-window.addEventListener('load', window_LoadHandler);
+window.addEventListener('load', windowLoadHandler);
 
-function window_LoadHandler() {
+function windowLoadHandler() {
   var nodeLogInInput = document.querySelector('#loginBtn');
-  nodeLogInInput.addEventListener('click', logIn_ClickHandler);
+  nodeLogInInput.addEventListener('click', logInClickHandler);
 }
 
-function logIn_ClickHandler() {
+function logInClickHandler() {
   var inputEmail = document.getElementById('inputEmail').value;
   var inputPassword = document.getElementById('inputPassword').value;
 
   for (var i = 0; i < userLoginData.length; i++) {
-    if (inputEmail == userLoginData[i].email && inputPassword == userLoginData[i].password) {
+    if (inputEmail === userLoginData[i].email && inputPassword === userLoginData[i].password) {
       window.open('/views/indexSara.html', '_self');
       return;
     }
