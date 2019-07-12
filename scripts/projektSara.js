@@ -1,3 +1,7 @@
+window.addEventListener('load', Window_LoadHandler, false);
+function Window_LoadHandler() {
+  User.init();
+}
 var User = {
   data: [],
   init() {
