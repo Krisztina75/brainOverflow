@@ -18,22 +18,24 @@
              class="logo">
         <h1 class="login-h1">Bejelentkezés</h1>
         <form>
-            <p>Név / Email cím</p>
-            <input type="text"
+            <p>Email cím</p>
+            <input type="email"
                    name="emailname"
-                   id="inputEmailName"
+                   id="inputEmail"
                    placeholder="Név vagy email cím"
-                   onchange="searchUserEmailName()"
                    required>
             <p>Jelszó</p>
             <input type="password"
                    name="password"
                    id="inputPassword"
                    placeholder="Add meg a jelszavad"
-                   onchange="searchUserPassword()"
                    required>
-            <input onclick="navigateToIndexHTML()"
-                   type="submit"
+            <div id="failedLogin">
+                <p>Hibás felhasználónév vagy jelszó</p>
+            </div>
+            <br>
+            <input id="loginBtn"
+                   type="button"
                    name="submit"
                    value="Bejelentkezés">
         </form>
