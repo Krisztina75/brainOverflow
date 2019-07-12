@@ -20,7 +20,7 @@ var User = {
   showAll(users) {
     var usersTemplate = '';
     for (var i = 0; i < users.length; i += 1) {
-      usersTemplate += '<tr>';
+      usersTemplate += `<tr id="${users[i].id}">`;
 
       for (var memberName in users[i]) {
         if (users[i].hasOwnProperty(memberName)) {
@@ -33,6 +33,7 @@ var User = {
 
       usersTemplate += '</tr>';
     }
+
     document.querySelector('.users__data').innerHTML = usersTemplate;
   },
   remove() {
