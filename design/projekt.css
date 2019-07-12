@@ -27,12 +27,12 @@
 
     margin: 0 auto;
     position: relative;
-    top:100px;
+    top: 100px;
 }
 
 body {
     margin: 0;
-background:#FFF8DC;
+    background: #FFF8DC;
 }
 
 nav {
@@ -42,10 +42,11 @@ nav {
     top: 0;
     width: 100vw;
     z-index: 1;
- 
+
 }
-nav a{
-    padding:10px 50px;
+
+nav a {
+    padding: 10px 50px;
     text-decoration: none;
     color: #000;
 }
@@ -53,7 +54,7 @@ nav a{
 header {
     position: relative;
     top: 40px;
-    background:url(/img/brainpic.PNG);
+    background: url(/img/brainpic.PNG);
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
@@ -62,4 +63,23 @@ header {
 .newUserDiv {
     position: relative;
     top: 60px;
+}
+
+#deleteDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 3px solid #000;
+    padding: 30px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.input--disabled{
+    border: none;
+    color: #000;
+    background: #FFF8DC;
 }

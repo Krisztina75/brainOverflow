@@ -10,6 +10,15 @@
 <link rel="stylesheet" href="/design/projekt.css">
 
 <body>
+    <div class="uzenet display--none"></div>
+    <div class="uzenet display--none"></div>
+    <div class="uzenet display--none"></div>
+    <div class="uzenet display--none"></div>
+    <div id="deleteDiv" class="display--none">
+        <p>Biztosan törölni szeretnéd?</p>
+        <button onclick="User.applyDelete('true')">Igen</button>
+        <button onclick="User.applyDelete('false')">Nem</button>
+    </div>
     <nav>
         <a href="">Főoldal</a>
         <a href="">Rólunk</a>
@@ -19,32 +28,32 @@
 
         <div>Brainoverflow Admin</div>
     </header>
-    <div>
-        <main>
-            <div id="emptyInputBoxMessage" class="uzenet display--none uzenetAnimation">Üzenet</div>
-            <div class="uzenet display--none"></div>
-            <div class="uzenet display--none"></div>
-            <div class="uzenet display--none"></div>
-            <div class="newUserDiv">
-                <label for="newUser">Új felhasználó</label>
-                <input type="text" name="newUser" id="newUser" placeholder="Name" required>
-                <input type="email" name="newUser" id="newUserEmail" placeholder="Email address" required>
-                <input type="text" name="newUser" id="newUserAddress" placeholder="Address" required>
-                <button type="submit" onclick="User.create()" value="Hozzáadás">Hozzáadás</button>
-                <button onclick="User.clear()">Mégse</button>
-            </div>
-            <div class="users">
-                <div id="deleteDiv" class="display--none">
-                    <p>Biztosan törölni szeretnéd?</p>
-                    <button onclick="User.applyDelete('true')">Igen</button>
-                    <button onclick="User.applyDelete('false')">Nem</button>
-                </div>
-                <table class="users__table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email address</th>
-                            <th>Address</th>
+    <main>
+        <div class="newUserDiv">
+            <label for="newUser">Új felhasználó</label>
+            <input type="text" name="newUser" id="newUser" placeholder="Name" required>
+            <input type="email" name="newUser" id="newUserEmail" placeholder="Email address" required>
+            <input type="text" name="newUser" id="newUserAddress" placeholder="Address" required>
+            <button type="submit" onclick="User.create()" value="Hozzáadás">Hozzáadás</button>
+            <button onclick="User.clear()">Mégse</button>
+        </div>
+        <div class="users">
+            <table class="users__table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email address</th>
+                        <th>Address</th>
+
+                    </tr>
+                </thead>
+                <tbody class="users__data">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
 
                         </tr>
                     </thead>
