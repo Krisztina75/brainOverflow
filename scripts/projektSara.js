@@ -31,10 +31,11 @@ var User = {
 
       for (var memberName in users[i]) {
         if (users[i].hasOwnProperty(memberName)) {
-          // if (memberName === 'id') {
-          //   continue;
-          // }
-          usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
+          if (memberName === 'id') {
+            usersTemplate += `<td><input type="text" class="input--disabled inputID" disabled value="${users[i][memberName]}"></td>`;
+          } else {
+            usersTemplate += `<td><input type="text" class="input--disabled" disabled value="${users[i][memberName]}"></td>`;
+          }
         }
       }
       usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
