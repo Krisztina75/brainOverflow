@@ -135,7 +135,7 @@ header {
 
 .uzenetBoxRed {
     width: 300px;
-    height: 30px;
+    height: 20px;
     background-color: #ff000080;
     position: absolute;
     top: 3px;
@@ -150,7 +150,7 @@ header {
 
 .uzenetBoxGreen {
     width: 300px;
-    height: 30px;
+    height: 20px;
     background-color: #32CD3299;
     position: absolute;
     top: 3px;
