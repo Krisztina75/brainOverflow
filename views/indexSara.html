@@ -21,10 +21,11 @@
         </header>
         <div class="uzenetKeret">
             <div class="display--none" id="ujFelhasznaloUresMezok">Minden mezőbe írj legalább egy karaktert!</div>
-            <div class="display--none" id="ujFelhasznaloSikeresRogzites">Az új felhasználó sikeresen rögzítve!</div>
+            <div class="display--none" id="ujFelhasznaloSikeresenRogzitve">Az új felhasználó sikeresen rögzítve!</div>
             <div class="display--none" id="felhasznaloSikeresenTorolve">A felhasználó sikeresen törölve</div>
             <div class="display--none" id="felhasznaloSikeresenModositva">A módosítások sikeresen mentésre kerültek!
             </div>
+            <div class="display--none" id="maxOfId"></div>
         </div>
         <div class="newUserDiv">
             <label for="newUser">Új felhasználó</label>
@@ -33,6 +34,7 @@
             <input type="text" name="newUser" id="newUserAddress" placeholder="Address" required>
             <button type="submit" onclick="User.create()" value="Hozzáadás">Hozzáadás</button>
             <button onclick="User.clear()">Mégse</button>
+            <button onclick="User.maxOfUserIdUzenet()" id="th5">Max of Id</button>
         </div>
         <div id="deleteDiv" class="display--none">
             <p>Biztosan törölni szeretnéd?</p>
@@ -52,7 +54,7 @@
                         <th id="th4">Address</th>
                     </tr>
                 </thead>
-                <tbody class="users__data">
+                <tbody class=" users__data">
 
                 </tbody>
             </table>
