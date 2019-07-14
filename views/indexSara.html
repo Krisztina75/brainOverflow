@@ -10,25 +10,21 @@
 <link rel="stylesheet" href="/design/projekt.css">
 
 <body>
-    <div class="uzenet display--none">Üzenet</div>
-    <div class="uzenet display--none"></div>
-    <div class="uzenet display--none"></div>
-    <div class="uzenet display--none"></div>
-    <div id="deleteDiv" class="display--none">
-        <p>Biztosan törölni szeretnéd?</p>
-        <button onclick="User.applyDelete('true')">Igen</button>
-        <button onclick="User.applyDelete('false')">Nem</button>
-    </div>
-    <nav>
-        <a href="">Főoldal</a>
-        <a href="">Rólunk</a>
-        <a href="">Kapcsolat</a>
-    </nav>
-    <header>
-
-        <div>Brainoverflow Admin</div>
-    </header>
-    <main>
+    <div id="fixFejlec">
+        <nav>
+            <a href="">Főoldal</a>
+            <a href="">Rólunk</a>
+            <a href="">Kapcsolat</a>
+        </nav>
+        <header>
+            <div>brainOverflow Admin</div>
+        </header>
+        <div class="uzenetKeret">
+            <div class="display--none" id="uzenetBox">Üzenet</div>
+            <div class="display--none"></div>
+            <div class="display--none"></div>
+            <div class="display--none"></div>
+        </div>
         <div class="newUserDiv">
             <label for="newUser">Új felhasználó</label>
             <input type="text" name="newUser" id="newUser" placeholder="Name" required>
@@ -37,15 +33,22 @@
             <button type="submit" onclick="User.create()" value="Hozzáadás">Hozzáadás</button>
             <button onclick="User.clear()">Mégse</button>
         </div>
+        <div id="deleteDiv" class="display--none">
+            <p>Biztosan törölni szeretnéd?</p>
+            <button onclick="User.applyDelete('true')">Igen</button>
+            <button onclick="User.applyDelete('false')">Nem</button>
+        </div>
+    </div>
+
+    <main>
         <div class="users">
             <table class="users__table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email address</th>
-                        <th>Address</th>
-
+                        <th id="th1">ID</th>
+                        <th id="th2">Name</th>
+                        <th id="th3">Email address</th>
+                        <th id="th4">Address</th>
                     </tr>
                 </thead>
                 <tbody class="users__data">

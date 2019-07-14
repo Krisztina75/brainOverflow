@@ -102,7 +102,7 @@ var User = {
     if (newUser.name === null || newUser.name === '' ||
       newUserEmail === null || newUserEmail === '' ||
       newUserAddress === null || newUserAddress === '') {
-      var nodeUzenet = document.querySelector('#emptyInputBoxMessage');
+      var nodeUzenet = document.querySelector('#uzenetBox');
       nodeUzenet.setAttribute('class', 'uzenetAnimation');
       setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
     }
