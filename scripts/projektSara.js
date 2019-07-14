@@ -41,7 +41,9 @@ var User = {
           }
         }
       }
-      usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button> <button class="display--none" dataid="${users[i].id}">x</button><button class="display--none" dataid="${users[i].id}">✓</button></td>`;
+      usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button>
+      <button onclick="User.save()" class="display--none" dataid="${users[i].id}">✓</button>
+      <button onclick="User.cancel()" class="display--none" dataid="${users[i].id}">X</button></td>`;
       usersTemplate += `<td><button onclick="User.torles()" dataid="${users[i].id}">Törlés</button></td>`;
       usersTemplate += '</tr>';
     }
@@ -152,7 +154,10 @@ var User = {
     var nodeTD = event.target;
     var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
     var nodeTR = document.getElementById(`${nodeTRID}`);
-
+    nodeTR.children[4].children[0].setAttribute('class', 'display--none');
+    nodeTR.children[4].children[1].setAttribute('class', 'display');
+    nodeTR.children[4].children[2].setAttribute('class', 'display');
+    // var nodeSzerkesztButton = nodeTR.children[]
     var nodeUzenet = document.querySelector('#felhasznaloSikeresenModositva');
     nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
     setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
@@ -161,6 +166,22 @@ var User = {
       var nodeInput = nodeTR.children[i].children[0];
       nodeInput.disabled = false;
     }
+  },
+  save() {
+    var nodeTD = event.target;
+    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+    var nodeTR = document.getElementById(`${nodeTRID}`);
+    nodeTR.children[4].children[0].setAttribute('class', 'display');
+    nodeTR.children[4].children[1].setAttribute('class', 'display--none');
+    nodeTR.children[4].children[2].setAttribute('class', 'display--none');
+  },
+  cancel() {
+    var nodeTD = event.target;
+    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+    var nodeTR = document.getElementById(`${nodeTRID}`);
+    nodeTR.children[4].children[0].setAttribute('class', 'display');
+    nodeTR.children[4].children[1].setAttribute('class', 'display--none');
+    nodeTR.children[4].children[2].setAttribute('class', 'display--none');
   }
 
 };
