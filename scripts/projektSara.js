@@ -57,6 +57,10 @@ var User = {
       User.remove(this.torolniKivantSzar);
       var nodeDeleteDiv = document.querySelector('#deleteDiv');
       nodeDeleteDiv.style.display = 'none';
+
+      var nodeUzenet = document.querySelector('#felhasznaloSikeresenTorolve');
+      nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
     } else {
       nodeDeleteDiv = document.querySelector('#deleteDiv');
       nodeDeleteDiv.style.display = 'none';
@@ -125,6 +129,10 @@ var User = {
     var nodeTD = event.target;
     var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
     var nodeTR = document.getElementById(`${nodeTRID}`);
+
+    var nodeUzenet = document.querySelector('#felhasznaloSikeresenModositva');
+    nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
+    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
 
     for (var i = 1; i < 4; i++) {
       var nodeInput = nodeTR.children[i].children[0];
