@@ -65,7 +65,7 @@ var User = {
 
       var nodeUzenet = document.querySelector('#felhasznaloSikeresenTorolve');
       nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
-      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
     } else {
       nodeDeleteDiv = document.querySelector('#deleteDiv');
       nodeDeleteDiv.style.display = 'none';
@@ -96,7 +96,7 @@ var User = {
     var nodeUzenet = document.querySelector('#maxOfId');
     nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
     nodeUzenet.innerText = `A legnagyobb felhasználóID pillanatnyilag: ${this.calculateMaxOfId()}`;
-    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
+    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
   },
 
   create() {
@@ -126,7 +126,7 @@ var User = {
       this.clear();
       var nodeUzenet = document.querySelector('#ujFelhasznaloSikeresenRogzitve');
       nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
-      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
     }
 
     if (newUser.name === null || newUser.name === '' ||
@@ -134,7 +134,7 @@ var User = {
       newUserAddress === null || newUserAddress === '') {
       nodeUzenet = document.querySelector('#ujFelhasznaloUresMezok');
       nodeUzenet.setAttribute('class', 'uzenetBoxRed');
-      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
     }
     this.showAll(this.data);
   },
@@ -155,7 +155,7 @@ var User = {
 
     var nodeUzenet = document.querySelector('#felhasznaloSikeresenModositva');
     nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
-    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
+    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
 
     for (var i = 1; i < 4; i++) {
       var nodeInput = nodeTR.children[i].children[0];
