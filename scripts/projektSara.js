@@ -97,14 +97,17 @@ var User = {
       newUserAddress !== null && newUserAddress !== '') {
       this.data.push(newUser);
       this.clear();
+      var nodeUzenet = document.querySelector('#ujFelhasznaloSikeresRogzites');
+      nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
     }
 
     if (newUser.name === null || newUser.name === '' ||
       newUserEmail === null || newUserEmail === '' ||
       newUserAddress === null || newUserAddress === '') {
-      var nodeUzenet = document.querySelector('#uzenetBox');
-      nodeUzenet.setAttribute('class', 'uzenetAnimation');
-      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
+      var nodeUzenet = document.querySelector('#ujFelhasznaloUresMezok');
+      nodeUzenet.setAttribute('class', 'uzenetBoxRed');
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 3000);
     }
     this.showAll(this.data);
   },

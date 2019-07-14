@@ -130,24 +130,28 @@ header {
     text-align: center;
 }
 
-.uzenetBox {
-    width: 700px;
-    height: 10px;
-    background-color: #96ed66;
-    position: relative;
-    top: 80px;
-    animation-name: example;
-    animation-duration: 4s;
-
+.uzenetBoxRed {
+    width: 100vw;
+    height: 30px;
+    background-color: #ff000080;
+    position: absolute;
+    top: 3px;
+    padding: 8px;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
 }
 
-/* @keyframes example {
-    0% {
-        left: 0px;
-        top: 0px;
-    }
-
-    100% {
-        left: 600px;
-        top: 0px;
-    } */
+.uzenetBoxGreen {
+    width: 100vw;
+    height: 30px;
+    background-color:#32CD3299;
+    position: absolute;
+    top: 3px;
+    padding: 8px;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+}
