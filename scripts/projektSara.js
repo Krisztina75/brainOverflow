@@ -42,7 +42,7 @@ var User = {
         }
       }
       usersTemplate += `<td><button onclick="User.edit()" dataid="${users[i].id}">Szerkesztés</button>
-      <button onclick="User.save()" class="display--none" dataid="${users[i].id}">✓</button>
+      <button onclick="User.save()" class="display--none" dataid="${users[i].id}">Mentés</button>
       <button onclick="User.cancel()" class="display--none" dataid="${users[i].id}">X</button></td>`;
       usersTemplate += `<td><button onclick="User.torles()" dataid="${users[i].id}">Törlés</button></td>`;
       usersTemplate += '</tr>';
@@ -151,20 +151,22 @@ var User = {
 
   },
   edit() {
-    var nodeTD = event.target;
-    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
-    var nodeTR = document.getElementById(`${nodeTRID}`);
-    nodeTR.children[4].children[0].setAttribute('class', 'display--none');
-    nodeTR.children[4].children[1].setAttribute('class', 'display');
-    nodeTR.children[4].children[2].setAttribute('class', 'display');
-    // var nodeSzerkesztButton = nodeTR.children[]
-    var nodeUzenet = document.querySelector('#felhasznaloSikeresenModositva');
-    nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
-    setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
+    for (var i = 0; i < User.length; i += '') {
+      var nodeTD = event.target;
+      var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+      var nodeTR = document.getElementById(`${nodeTRID}`);
+      nodeTR.children[4].children[0].setAttribute('class', 'display--none');
+      nodeTR.children[4].children[1].setAttribute('class', 'display');
+      nodeTR.children[4].children[2].setAttribute('class', 'display');
+      // var nodeSzerkesztButton = nodeTR.children[]
+      var nodeUzenet = document.querySelector('#felhasznaloSikeresenModositva');
+      nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
 
-    for (var i = 1; i < 4; i++) {
-      var nodeInput = nodeTR.children[i].children[0];
-      nodeInput.disabled = false;
+      for (var i = 1; i < 4; i++) {
+        var nodeInput = nodeTR.children[i].children[0];
+        nodeInput.disabled = false;
+      }
     }
   },
   save() {
@@ -179,6 +181,10 @@ var User = {
     var nodeTD = event.target;
     var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
     var nodeTR = document.getElementById(`${nodeTRID}`);
+    for (var i = 1; i < 4; i++) {
+      var nodeInput = nodeTR.children[i].children[0];
+      nodeInput.disabled = true;
+    }
     nodeTR.children[4].children[0].setAttribute('class', 'display');
     nodeTR.children[4].children[1].setAttribute('class', 'display--none');
     nodeTR.children[4].children[2].setAttribute('class', 'display--none');
