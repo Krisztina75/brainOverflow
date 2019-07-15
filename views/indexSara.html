@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="/design/projekt.css">
+<link rel="stylesheet"
+      href="/design/projekt.css">
 
 <body>
     <div id="fixFejlec">
@@ -20,23 +23,46 @@
             <div>brainOverflow Admin</div>
         </header>
         <div class="uzenetKeret">
-            <div class="display--none" id="ujFelhasznaloUresMezok">Minden mezőbe írj legalább egy karaktert!</div>
-            <div class="display--none" id="ujFelhasznaloSikeresenRogzitve">Az új felhasználó sikeresen rögzítve!</div>
-            <div class="display--none" id="felhasznaloSikeresenTorolve">A felhasználó sikeresen törölve</div>
-            <div class="display--none" id="felhasznaloSikeresenModositva">A módosítások sikeresen mentésre kerültek!
+            <div class="display--none"
+                 id="ujFelhasznaloUresMezok">Minden mezőbe írj legalább egy karaktert!</div>
+            <div class="display--none"
+                 id="ujFelhasznaloSikeresenRogzitve">Az új felhasználó sikeresen rögzítve!</div>
+            <div class="display--none"
+                 id="felhasznaloSikeresenTorolve">A felhasználó sikeresen törölve</div>
+            <div class="display--none"
+                 id="felhasznaloSikeresenModositva">A módosítások sikeresen mentésre kerültek!
             </div>
-            <div class="display--none" id="maxOfId"></div>
+            <div class="display--none"
+                 id="noMultiSelect">Nem módosíthatsz több felhasználót egyszerre.</div>
+            <div class="display--none"
+                 id="maxOfId"></div>
         </div>
         <div class="newUserDiv">
             <label for="newUser">Új felhasználó</label>
-            <input type="text" name="newUser" id="newUser" placeholder="Name" required>
-            <input type="email" name="newUser" id="newUserEmail" placeholder="Email address" required>
-            <input type="text" name="newUser" id="newUserAddress" placeholder="Address" required>
-            <button type="submit" onclick="User.create()" value="Hozzáadás">Hozzáadás</button>
+            <input type="text"
+                   name="newUser"
+                   id="newUser"
+                   placeholder="Name"
+                   required>
+            <input type="email"
+                   name="newUser"
+                   id="newUserEmail"
+                   placeholder="Email address"
+                   required>
+            <input type="text"
+                   name="newUser"
+                   id="newUserAddress"
+                   placeholder="Address"
+                   required>
+            <button type="submit"
+                    onclick="User.create()"
+                    value="Hozzáadás">Hozzáadás</button>
             <button onclick="User.clear()">Mégse</button>
-            <button onclick="User.maxOfUserIdUzenet()" id="th5">Max of Id</button>
+            <button onclick="User.maxOfUserIdUzenet()"
+                    id="th5">Max of Id</button>
         </div>
-        <div id="deleteDiv" class="display--none">
+        <div id="deleteDiv"
+             class="display--none">
             <p>Biztosan törölni szeretnéd?</p>
             <button onclick="User.applyDelete('true')">Igen</button>
             <button onclick="User.applyDelete('false')">Nem</button>

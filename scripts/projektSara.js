@@ -7,6 +7,7 @@ function windowLoadHandler() {
 var User = {
   data: [],
   torolniKivantSzar: 0,
+  szerkeszteniKivantSzar: 0,
   init() {
     this.getData();
   },
@@ -151,10 +152,10 @@ var User = {
 
   },
   edit() {
-    for (var i = 0; i < User.length; i += '') {
-      var nodeTD = event.target;
-      var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
-      var nodeTR = document.getElementById(`${nodeTRID}`);
+    var nodeTD = event.target;
+    var nodeTRID = parseInt(nodeTD.getAttribute('dataid'), 10);
+    var nodeTR = document.getElementById(`${nodeTRID}`);
+    if (User.szerkeszteniKivantSzar === 0) {
       nodeTR.children[4].children[0].setAttribute('class', 'display--none');
       nodeTR.children[4].children[1].setAttribute('class', 'display');
       nodeTR.children[4].children[2].setAttribute('class', 'display');
@@ -163,10 +164,15 @@ var User = {
       nodeUzenet.setAttribute('class', 'uzenetBoxGreen');
       setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
 
+      User.szerkeszteniKivantSzar = nodeTRID;
       for (var i = 1; i < 4; i++) {
         var nodeInput = nodeTR.children[i].children[0];
         nodeInput.disabled = false;
       }
+    } else {
+      var nodeUzenet = document.querySelector('#noMultiSelect');
+      nodeUzenet.setAttribute('class', 'uzenetBoxRed');
+      setTimeout(function idozito() { nodeUzenet.setAttribute('class', 'display--none'); }, 4000);
     }
   },
   save() {
@@ -176,6 +182,11 @@ var User = {
     nodeTR.children[4].children[0].setAttribute('class', 'display');
     nodeTR.children[4].children[1].setAttribute('class', 'display--none');
     nodeTR.children[4].children[2].setAttribute('class', 'display--none');
+    User.szerkeszteniKivantSzar = 0;
+    this.data[nodeTRID - 1].name = nodeTR.children[1].children[0].value;
+    this.data[nodeTRID - 1].emailAddress = nodeTR.children[2].children[0].value;
+    this.data[nodeTRID - 1].address = nodeTR.children[3].children[0].value;
+    this.showAll(this.data);
   },
   cancel() {
     var nodeTD = event.target;
@@ -188,6 +199,7 @@ var User = {
     nodeTR.children[4].children[0].setAttribute('class', 'display');
     nodeTR.children[4].children[1].setAttribute('class', 'display--none');
     nodeTR.children[4].children[2].setAttribute('class', 'display--none');
+    User.szerkeszteniKivantSzar = 0;
   }
 
 };
